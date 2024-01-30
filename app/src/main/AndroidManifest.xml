@@ -29,6 +29,10 @@
             android:name="com.app.flexfusion.Login"
             android:exported="false" />
 
+        <activity
+            android:name="com.app.flexfusion.SignUp"
+            android:exported="false" /> 
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

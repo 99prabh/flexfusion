@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+    <LinearLayout
+        android:id="@+id/lyt_img_levels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_level"
+            android:layout_margin="2dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_level"
+            android:layout_margin="2dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_level"
+            android:layout_margin="2dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_level"
+            android:layout_margin="2dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_level"
+            android:layout_margin="2dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:src="@drawable/ic_level"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Target Weight"
+        android:layout_below="@id/lyt_img_levels"
+        android:layout_centerHorizontal="true"
+        android:textSize="28sp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto_medium"/>
+
+
+    <TextView
+        android:id="@+id/tv_name_for_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:text="This will help to calculate your daily calorie count"
+        android:layout_below="@id/tv_name"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/roboto"/>
+
+    <EditText
+        android:id="@+id/et_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:background="@color/white"
+        android:fontFamily="@font/roboto"
+        android:hint="75"
+        android:inputType="text"
+        android:padding="20dp"
+        android:textAlignment="center"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/tv_kg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@id/et_weight"
+        android:background="@color/white"
+        android:fontFamily="@font/roboto"
+        android:inputType="text"
+        android:text="Kg"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="28sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:textSize="16sp"
+        android:layout_marginHorizontal="20dp"
+        android:fontFamily="@font/roboto_medium"
+        android:paddingVertical="12dp"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/custom_button"
+        android:textAlignment="center"
+        />
+
+</RelativeLayout>

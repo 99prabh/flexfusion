@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/lyt_img_levels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_level"
+            android:layout_margin="2dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_level"
+            android:layout_margin="2dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_level"
+            android:layout_margin="2dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_level"
+            android:layout_margin="2dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_level"
+            android:layout_margin="2dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:src="@drawable/ic_level_number"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activity Level"
+        android:layout_below="@id/lyt_img_levels"
+        android:layout_centerHorizontal="true"
+        android:textSize="28sp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto_medium"/>
+
+
+    <TextView
+        android:id="@+id/tv_name_for_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:text="When burning calories, your body needs more water."
+        android:layout_below="@id/tv_activity"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/roboto"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round_corners"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_less_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/roboto"
+                android:text="Less Activity"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_less_activity"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/roboto"
+                android:text="Less than 30 minutes a day of exercise or walking"
+                android:textColor="#2293E9"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round_corners"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_moderate_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/roboto"
+                android:text="Moderate Activity"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_moderate_activity"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/roboto"
+                android:text="Exercise everyday or walking for at least  one hour or 45 minutes"
+                android:textAlignment="center"
+                android:textColor="#2293E9"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round_corners"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_very_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/roboto"
+                android:text="Very Active"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_very_activity"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/roboto"
+                android:text="Exercise everyday that is equivalent to walking for at least four hours."
+                android:textAlignment="center"
+                android:textColor="#2293E9"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/roboto_medium"
+        android:paddingVertical="12dp"
+        android:text="Continue"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+</RelativeLayout>

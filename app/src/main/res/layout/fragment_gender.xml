@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+   >
+
+    <LinearLayout
+        android:id="@+id/lyt_img_levels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_level"
+            android:layout_margin="2dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_level"
+            android:layout_margin="2dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_level"
+            android:layout_margin="2dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_level_number"
+            android:layout_margin="2dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_level_number"
+            android:layout_margin="2dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:src="@drawable/ic_level_number"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose your gender"
+        android:layout_below="@id/lyt_img_levels"
+        android:layout_centerHorizontal="true"
+        android:textSize="28sp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto_medium"/>
+
+
+    <TextView
+        android:id="@+id/tv_name_for_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:text="Based on the body type we will better calculate your calories and hydration needs"
+        android:layout_below="@id/tv_gender"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/roboto"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_male"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round_corners"
+            android:drawableRight="@drawable/ic_male"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/roboto"
+            android:hint="Male"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textSize="28sp" />
+
+        <EditText
+            android:id="@+id/et_female"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_male"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round_corners"
+            android:drawableRight="@drawable/ic_female"
+            android:fontFamily="@font/roboto"
+            android:hint="Female"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textSize="28sp" />
+
+        <EditText
+            android:id="@+id/et_other"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_female"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round_corners"
+            android:drawableRight="@drawable/ic_other"
+            android:fontFamily="@font/roboto"
+            android:hint="Other"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textSize="28sp" />
+
+    </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/custom_button"
+            android:fontFamily="@font/roboto_medium"
+            android:paddingVertical="12dp"
+            android:text="Continue"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+</RelativeLayout>
