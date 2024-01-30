@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.app.flexfusion.Login"
+    tools:context=".Login"
     android:padding="10dp">
-
     <RelativeLayout
         android:id="@+id/lytSplash"
         android:layout_width="wrap_content"
@@ -38,30 +37,30 @@
         android:layout_below="@id/lytSplash"
         android:padding="20dp"
         >
-    <EditText
-        android:id="@+id/et_username"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:hint="User Name"
-        android:textSize="14sp"
-        android:fontFamily="@font/roboto"
-        android:background="@drawable/round_corners"
-        android:inputType="text"
-        android:padding="15dp" />
+        <EditText
+            android:id="@+id/et_Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:hint="Email"
+            android:textSize="14sp"
+            android:fontFamily="@font/roboto"
+            android:background="@drawable/round_corners"
+            android:inputType="text"
+            android:padding="15dp" />
 
-    <EditText
-        android:id="@+id/et_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/et_username"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/round_corners"
-        android:fontFamily="@font/roboto"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:padding="15dp"
-        android:textSize="14sp" />
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_Email"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/round_corners"
+            android:fontFamily="@font/roboto"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:textSize="14sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -73,27 +72,26 @@
             android:fontFamily="@font/roboto"
             android:textColor="#9FA5BB"
             android:layout_marginTop="3dp"/>
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_signin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Sign In"
-        android:textSize="16sp"
-        android:fontFamily="@font/roboto_medium"
-        android:paddingVertical="12dp"
-        android:layout_below="@id/et_password"
-        android:textColor="@color/white"
-        android:layout_marginTop="30dp"
-        android:paddingRight="20dp"
-        android:drawableRight="@drawable/ic_button"
-        android:background="@drawable/custom_button"
-        android:textAlignment="center"
-        />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_Signin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign In"
+            android:textSize="16sp"
+            android:fontFamily="@font/roboto_medium"
+            android:paddingVertical="12dp"
+            android:layout_below="@id/et_password"
+            android:textColor="@color/white"
+            android:layout_marginTop="30dp"
+            android:paddingRight="20dp"
+            android:drawableRight="@drawable/ic_button"
+            android:background="@drawable/custom_button"
+            android:textAlignment="center"
+            />
         <TextView
-            android:id="@+id/tv_SignUp"
+            android:id="@+id/tv_SignIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/btn_signin"
             android:layout_centerHorizontal="true"
             android:text="Don’t have an account? Sign Up"
             android:textSize="12sp"

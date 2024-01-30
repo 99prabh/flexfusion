@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.app.flexfusion.SignUp">
+    tools:context=".SignUp">
 
     <RelativeLayout
         android:id="@+id/lytSplash"
@@ -103,7 +103,7 @@
             android:textAlignment="center"
             />
         <TextView
-            android:id="@+id/tv_SignUp"
+            android:id="@+id/tv_SignIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/btn_signup"
