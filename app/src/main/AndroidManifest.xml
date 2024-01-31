@@ -31,7 +31,10 @@
 
         <activity
             android:name="com.app.flexfusion.SignUp"
-            android:exported="false" /> 
+            android:exported="false" />
+
+        <activity android:name=".LayoutsActivity"
+            android:exported="true"/>
 
         <meta-data
             android:name="preloaded_fonts"
