@@ -27,9 +27,9 @@ public class Home extends AppCompatActivity {
             if (item.getItemId() == R.id.water) {
                 replaceFragment(new WaterFragment());
             } else if (item.getItemId() == R.id.diet) {
-
+                replaceFragment(new DietPlansFragment());
             } else if (item.getItemId() == R.id.profile) {
-               
+                replaceFragment(new ProfileFragment());
             }
             return true;
         });
