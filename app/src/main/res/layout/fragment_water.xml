@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WaterFragment">
+
+    <ImageView
+        android:id="@+id/img_calender"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_calender"
+        android:padding="10dp"/>
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_bold_chart"
+        android:padding="10dp"/>
+    <ImageView
+        android:id="@+id/ic_water_intake"
+        android:layout_width="250dp"
+        android:layout_height="270dp"
+        android:src="@drawable/ic_water_intake"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/img_calender"
+        android:layout_marginTop="10dp"/>
+
+    <ImageView
+        android:id="@+id/ic_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ic_water_intake"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/ic_add" />
+    <TextView
+        android:id="@+id/tv_water_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.5L - 25 %"
+        android:textSize="18sp"
+        android:layout_below="@id/ic_add"
+        android:paddingHorizontal="20dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/roboto"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.5L - 25 %"
+        android:textColor="#8E8E8E"
+        android:textSize="14sp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/ic_add"
+        android:paddingHorizontal="20dp"
+        android:layout_marginTop="67dp"
+        android:fontFamily="@font/roboto"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_level_home"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tv_water_percentage"
+        android:paddingHorizontal="20dp"/>
+</RelativeLayout>
