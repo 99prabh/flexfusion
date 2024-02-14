@@ -1,4 +1,4 @@
-package com.app.flexfusion;
+package com.app.flexfusion.models;
 
 public class Users {
     private String userId;

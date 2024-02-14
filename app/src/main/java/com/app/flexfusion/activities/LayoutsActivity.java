@@ -1,4 +1,4 @@
-package com.app.flexfusion;
+package com.app.flexfusion.activities;
 
 import android.os.Bundle;
 
@@ -7,6 +7,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
+
+import com.app.fragments.MainFragment;
+import com.app.flexfusion.R;
 
 public class LayoutsActivity extends AppCompatActivity {
 

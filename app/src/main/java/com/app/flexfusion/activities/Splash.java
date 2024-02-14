@@ -1,14 +1,16 @@
-package com.app.flexfusion;
+package com.app.flexfusion.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Splash2 extends AppCompatActivity {
+import com.app.flexfusion.R;
+
+public class Splash extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash2);
+        setContentView(R.layout.activity_splash);
     }
 }

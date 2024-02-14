@@ -1,4 +1,4 @@
-package com.app.flexfusion;
+package com.app.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +14,9 @@ import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
+
+import com.app.flexfusion.activities.Home;
+import com.app.flexfusion.R;
 
 public class MainFragment extends Fragment {
 

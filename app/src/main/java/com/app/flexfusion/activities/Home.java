@@ -1,4 +1,4 @@
-package com.app.flexfusion;
+package com.app.flexfusion.activities;
 
 import android.os.Bundle;
 
@@ -7,7 +7,11 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.app.flexfusion.R;
 import com.app.flexfusion.databinding.ActivityHomeBinding;
+import com.app.fragments.DietPlansFragment;
+import com.app.fragments.ProfileFragment;
+import com.app.fragments.WaterFragment;
 
 public class Home extends AppCompatActivity {
 

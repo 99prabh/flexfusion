@@ -1,4 +1,4 @@
-package com.app.flexfusion;
+package com.app.flexfusion.activities;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -7,7 +7,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.app.flexfusion.databinding.ActivityLoginBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -48,7 +47,7 @@ public class Login extends AppCompatActivity {
         });
 
         binding.tvSignIn.setOnClickListener(v -> {
-            Intent intent=new Intent(Login.this,SignUp.class);
+            Intent intent=new Intent(Login.this, SignUp.class);
             startActivity(intent);
         });
 
@@ -59,7 +58,7 @@ public class Login extends AppCompatActivity {
                 progressDialog.show();
                 FirebaseUser user=auth.getCurrentUser();
                 Toast.makeText(Login.this,"LogIn Successfully!",Toast.LENGTH_SHORT).show();
-                Intent intent=new Intent(Login.this,Splash2.class);
+                Intent intent=new Intent(Login.this, Splash2.class);
                 startActivity(intent);
                 finish();
             }
