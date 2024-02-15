@@ -1,4 +1,4 @@
-package com.app.flexfusion.fragments;
+package com.app.fragments;
 
 import android.content.Context;
 import android.content.Intent;
@@ -25,11 +25,7 @@ import android.widget.Toast;
 import com.app.flexfusion.R;
 import com.app.flexfusion.activities.Home;
 import com.app.flexfusion.models.ProfileDetails;
-
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import com.app.repositories.DatabaseHelper;
 
 public class MainFragment extends Fragment {
 

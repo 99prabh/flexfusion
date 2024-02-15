@@ -10,34 +10,44 @@
         android:orientation="horizontal"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        >
+        > <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_level"
+        android:layout_margin="1dp"/>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_level"
-            android:layout_margin="2dp"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_level"
-            android:layout_margin="2dp"/>
+            android:layout_margin="1dp"/>
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_level"
-            android:layout_margin="2dp"/>
+            android:layout_margin="1dp"/>
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_level"
-            android:layout_margin="2dp"/>
+            android:layout_margin="1dp"/>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_level_number"
-            android:layout_margin="2dp"/>
+            android:layout_margin="1dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:src="@drawable/ic_level_number"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_level_number"
+            android:layout_margin="1dp"/>
 
         <ImageView
             android:layout_width="wrap_content"
@@ -71,22 +81,37 @@
         android:layout_marginTop="5dp"
         android:fontFamily="@font/roboto"/>
 
-    <EditText
-        android:id="@+id/et_weight"
-        android:layout_width="match_parent"
+    <Spinner
+        android:id="@+id/spinnerWeight"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_marginTop="30dp"
-        android:background="@color/white"
+        android:background="@drawable/round_corners"
         android:fontFamily="@font/roboto"
-        android:hint="Enter Your Weight"
-        android:inputType="text"
-        android:padding="15dp"
+        android:padding="20dp"
         android:textAlignment="center"
         android:textSize="28sp" />
 
+    <TextView
+        android:id="@+id/tv_kg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@id/spinnerWeight"
+        android:background="@color/white"
+        android:fontFamily="@font/roboto"
+        android:inputType="text"
+        android:text="Kg"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="28sp" />
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_continue"
+        android:id="@+id/btn_weight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Continue"
