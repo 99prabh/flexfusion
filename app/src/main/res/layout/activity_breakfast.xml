@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Breakfast">
+    tools:context=".activities.DietsActivity">
     <TextView
-        android:id="@+id/tv_breakfast"
+        android:id="@+id/tv_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Breakfast"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:textSize="20sp"
+        android:padding="5dp"
         android:fontFamily="@font/roboto_medium"
         />
     <View
@@ -20,9 +21,10 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#707070"
-        android:layout_below="@id/tv_breakfast"
-       />
+        android:layout_below="@id/tv_text"
+        />
     <EditText
+        android:id="@+id/edtSearchBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/view_line"
@@ -33,4 +35,10 @@
         android:layout_marginHorizontal="20dp"
         android:background="@drawable/round_corners"
         android:padding="9dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewDiets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtSearchBar"
+        android:padding="10dp"/>
 </RelativeLayout>

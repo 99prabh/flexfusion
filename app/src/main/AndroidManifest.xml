@@ -39,6 +39,10 @@
         <activity
             android:name=".activities.Home"
             android:exported="false" />
+        <activity android:name=".activities.DietsActivity"
+            android:exported="false"
+            />
+
 
         <meta-data
             android:name="preloaded_fonts"
