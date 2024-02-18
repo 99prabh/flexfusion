@@ -30,6 +30,16 @@ public class ProfileDetails {
         this.userId=id;
     }
 
+    public ProfileDetails(String name, String age, String gender, String weight, String height, String plan, String targeted_weight) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.weight = weight;
+        this.height = height;
+        this.plan = plan;
+        this.targeted_weight = targeted_weight;
+    }
+
     public String getUserId() {
         return userId;
     }

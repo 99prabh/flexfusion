@@ -26,7 +26,6 @@ import com.app.flexfusion.R;
 import com.app.flexfusion.activities.HomeActivity;
 import com.app.flexfusion.models.ProfileDetails;
 import com.app.repositories.DatabaseHelper;
-import com.google.firebase.auth.FirebaseAuth;
 
 public class MainFragment extends Fragment {
 
@@ -44,6 +43,8 @@ public class MainFragment extends Fragment {
     private ViewPager viewPager;
 
     DatabaseHelper db;
+
+    SharedPreferences sharedPreferences;
 
     // Constructor to pass layout resource ID to the fragment
     public MainFragment(int layoutResId) {
@@ -74,6 +75,8 @@ public class MainFragment extends Fragment {
         btnContinue_plan = rootView.findViewById(R.id.btn_continue_plan);
         viewPager.beginFakeDrag();
         db = new DatabaseHelper();
+
+        sharedPreferences = requireContext().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
 
 
         if (layoutResId == R.layout.fragment_name) {
@@ -365,8 +368,6 @@ public class MainFragment extends Fragment {
 
 
         if (layoutResId == R.layout.fragment_done) {
-
-            String id= FirebaseAuth.getInstance().getUid();
             btnDone.setOnClickListener(v -> {
                 String name_get = getSelectedValue("name");
                 String age_get = getSelectedValue("age");
@@ -375,9 +376,10 @@ public class MainFragment extends Fragment {
                 String height_get = getSelectedValue("height");
                 String plan_get = getSelectedValue("planText");
                 String targetWeight = getSelectedValue("targetWeight");
-                ProfileDetails profileDetails = new ProfileDetails(id,name_get, age_get, gender_get, weight_get, height_get, plan_get, targetWeight);
-                db.addRecord(profileDetails,id).addOnSuccessListener(suc -> {
-                    Toast.makeText(getContext(), "Data Added", Toast.LENGTH_SHORT).show();
+                ProfileDetails profileDetails = new ProfileDetails(name_get, age_get, gender_get, weight_get, height_get, plan_get, targetWeight);
+                db.addRecord(profileDetails).addOnSuccessListener(suc -> {
+                    Toast.makeText(getContext(), "Data Added", Toast.
+                            LENGTH_SHORT).show();
                     Intent intent = new Intent(getContext(), HomeActivity.class);
                     startActivity(intent);
                     requireActivity().finish();
@@ -387,6 +389,10 @@ public class MainFragment extends Fragment {
 
                 });
             });
+            // Set a flag in shared preferences indicating completion
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putInt("setup_completed", 1);
+            editor.apply();
         }
 
 

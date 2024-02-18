@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.app.flexfusion.R;
 import com.app.flexfusion.adapters.DietsAdapter;
 import com.app.flexfusion.models.DietItems;
+import com.app.fragments.DietPlansFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,7 +43,6 @@ public class DietsActivity extends AppCompatActivity {
         }
         dietsAdapter=new DietsAdapter(this,list);
         recyclerView.setAdapter(dietsAdapter);
-
 
     }
 }
