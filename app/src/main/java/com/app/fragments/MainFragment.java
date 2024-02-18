@@ -23,9 +23,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.app.flexfusion.R;
-import com.app.flexfusion.activities.Home;
+import com.app.flexfusion.activities.HomeActivity;
 import com.app.flexfusion.models.ProfileDetails;
 import com.app.repositories.DatabaseHelper;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainFragment extends Fragment {
 
@@ -364,6 +365,8 @@ public class MainFragment extends Fragment {
 
 
         if (layoutResId == R.layout.fragment_done) {
+
+            String id= FirebaseAuth.getInstance().getUid();
             btnDone.setOnClickListener(v -> {
                 String name_get = getSelectedValue("name");
                 String age_get = getSelectedValue("age");
@@ -372,10 +375,10 @@ public class MainFragment extends Fragment {
                 String height_get = getSelectedValue("height");
                 String plan_get = getSelectedValue("planText");
                 String targetWeight = getSelectedValue("targetWeight");
-                ProfileDetails profileDetails = new ProfileDetails(name_get, age_get, gender_get, weight_get, height_get, plan_get, targetWeight);
-                db.addRecord(profileDetails).addOnSuccessListener(suc -> {
+                ProfileDetails profileDetails = new ProfileDetails(id,name_get, age_get, gender_get, weight_get, height_get, plan_get, targetWeight);
+                db.addRecord(profileDetails,id).addOnSuccessListener(suc -> {
                     Toast.makeText(getContext(), "Data Added", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(getContext(), Home.class);
+                    Intent intent = new Intent(getContext(), HomeActivity.class);
                     startActivity(intent);
                     requireActivity().finish();
                 }).addOnFailureListener(er -> {

@@ -2,6 +2,8 @@ package com.app.flexfusion.models;
 
 public class ProfileDetails {
 
+
+    String userId;
     String name;
     String age;
     String gender;
@@ -10,7 +12,14 @@ public class ProfileDetails {
     String plan;
     String targeted_weight;
 
-    public ProfileDetails(String name, String age, String gender, String weight, String height, String plan, String targeted_weight) {
+    String Image;
+
+
+    public ProfileDetails(){
+
+    }
+
+    public ProfileDetails(String id,String name, String age, String gender, String weight, String height, String plan, String targeted_weight) {
         this.name = name;
         this.age = age;
         this.gender = gender;
@@ -18,7 +27,33 @@ public class ProfileDetails {
         this.height = height;
         this.plan = plan;
         this.targeted_weight = targeted_weight;
+        this.userId=id;
     }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public String getImage() {
+        return Image;
+    }
+
+    public void setImage(String image) {
+        Image = image;
+    }
+
+    public String getId() {
+        return userId;
+    }
+
+    public void setId(String id) {
+        this.userId = id;
+    }
+
     public String getName() {
         return name;
     }

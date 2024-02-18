@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.app.fragments.WaterFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
         android:id="@+id/img_calender"
@@ -17,20 +17,35 @@
         android:layout_alignParentRight="true"
         android:src="@drawable/ic_bold_chart"
         android:padding="10dp"/>
-    <ImageView
-        android:id="@+id/ic_water_intake"
-        android:layout_width="250dp"
-        android:layout_height="270dp"
-        android:src="@drawable/ic_water_intake"
+    <cjh.WaveProgressBarlibrary.WaveProgressBar
+        android:id="@+id/waveProgressbar"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_below="@+id/img_calender"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="105dp"
+        app:arc_color="@color/white"
+        app:cavans_bg="#E6E5E5"
+        app:front_wave_color="@color/blue"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/img_calender"
-        android:layout_marginTop="10dp"/>
+        app:progress="0"
+        app:border_color="@color/blue"
+        app:border_width="2dp"
+        app:shape="circle"
+        app:behind_wave_color="@color/dark_blue"
+        app:text_size="20sp" />
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_calender"
+        android:src="@drawable/icon_jar"
+        android:layout_centerHorizontal="true"/>
 
     <ImageView
         android:id="@+id/ic_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ic_water_intake"
+        android:layout_below="@id/waveProgressbar"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="70dp"
         android:src="@drawable/ic_add" />
@@ -40,6 +55,7 @@
         android:layout_height="wrap_content"
         android:text="0.5L - 25 %"
         android:textSize="18sp"
+
         android:layout_below="@id/ic_add"
         android:paddingHorizontal="20dp"
         android:layout_marginTop="60dp"

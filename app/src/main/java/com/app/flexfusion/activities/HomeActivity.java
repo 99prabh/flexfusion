@@ -13,7 +13,7 @@ import com.app.fragments.DietPlansFragment;
 import com.app.fragments.ProfileFragment;
 import com.app.fragments.WaterFragment;
 
-public class Home extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity {
 
     ActivityHomeBinding binding;
 

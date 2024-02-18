@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.app.flexfusion.activities.Home">
+    tools:context="com.app.flexfusion.activities.HomeActivity">
     <FrameLayout
         android:id="@+id/frame_home"
         android:layout_width="match_parent"

@@ -12,11 +12,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FlexFusionApp"
         tools:targetApi="31">
+
         <activity
-            android:name="com.app.flexfusion.activities.Splash"
+            android:name=".activities.SubCategories"
             android:exported="false" />
         <activity
-            android:name="com.app.flexfusion.activities.MainActivity"
+            android:name=".activities.TimerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.DietsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.History"
+            android:exported="false"
+            android:label="@string/title_activity_history"
+            android:theme="@style/Theme.FlexFusionApp" />
+        <activity
+            android:name=".activities.LayoutsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.HomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,25 +39,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name="com.app.flexfusion.activities.Login"
+            android:name=".activities.Splash2"
             android:exported="false" />
-
         <activity
-            android:name="com.app.flexfusion.activities.SignUp"
+            android:name=".activities.SignUp"
             android:exported="false" />
-
-        <activity android:name=".activities.LayoutsActivity"
-            android:exported="true"/>
-
         <activity
-            android:name=".activities.Home"
+            android:name=".activities.Login"
             android:exported="false" />
-        <activity android:name=".activities.DietsActivity"
-            android:exported="false"
-            />
-
+        
+        <activity
+            android:name=".activities.Splash"
+            android:exported="true"></activity>
+        <activity
+            android:name=".activities.MainActivity"
+            android:exported="true"></activity>
 
         <meta-data
             android:name="preloaded_fonts"
