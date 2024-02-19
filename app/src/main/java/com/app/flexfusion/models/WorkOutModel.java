@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class WorkOutModel implements Serializable {
     String WorkOutName;
     String Image;
-    String Equipment,TargetMuscle,ExerciseDetails;
+    String Equipment, TargetMuscle, ExerciseDetails;
     String id;
 
     public String getId() {
@@ -62,7 +62,7 @@ public class WorkOutModel implements Serializable {
     public WorkOutModel(String workOutName, String image, String equipment, String targetMuscle, String exerciseDetails) {
         WorkOutName = workOutName;
         Equipment = equipment;
-        Image=image;
+        Image = image;
         TargetMuscle = targetMuscle;
         ExerciseDetails = exerciseDetails;
     }
