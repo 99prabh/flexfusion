@@ -26,7 +26,7 @@ public class WorkOutAdapter extends RecyclerView.Adapter<WorkOutAdapter.ViewHold
     public WorkOutAdapter(List<WorkOutModel> workOutModelList, Context context, String title) {
         this.workOutModelList = workOutModelList;
         this.context = context;
-        this.title=title;
+        this.title = title;
     }
 
     @NonNull
@@ -43,8 +43,8 @@ public class WorkOutAdapter extends RecyclerView.Adapter<WorkOutAdapter.ViewHold
         holder.tvTitle.setText(workOutModel.getWorkOutName());
         Picasso.get().load(workOutModel.getImage()).into(holder.imageView);
 
-        holder.itemView.setOnClickListener(v->{
-            context.startActivity(new Intent(context, DetailActivity.class).putExtra("data",workOutModel).putExtra("title",title));
+        holder.itemView.setOnClickListener(v -> {
+            context.startActivity(new Intent(context, DetailActivity.class).putExtra("data", workOutModel).putExtra("title", title));
         });
     }
 
@@ -56,6 +56,7 @@ public class WorkOutAdapter extends RecyclerView.Adapter<WorkOutAdapter.ViewHold
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView tvTitle;
         ImageView imageView;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tvTitle = itemView.findViewById(R.id.tvTitle);

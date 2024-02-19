@@ -8,8 +8,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.app.fragments.MainFragment;
 import com.app.flexfusion.R;
+import com.app.flexfusion.fragments.MainFragment;
 
 public class LayoutsActivity extends AppCompatActivity {
 
@@ -23,7 +23,6 @@ public class LayoutsActivity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
     }
 
-    // WelcomePagerAdapter.java
     public class WelcomePagerAdapter extends FragmentPagerAdapter {
 
         private ViewPager viewPager;
@@ -50,12 +49,18 @@ public class LayoutsActivity extends AppCompatActivity {
                     fragment = new MainFragment(R.layout.fragment_weight);
                     break;
                 case 4:
-                    fragment = new MainFragment(R.layout.fragment_activity);
+                    fragment = new MainFragment(R.layout.fragment_height);
                     break;
                 case 5:
-                    fragment = new MainFragment(R.layout.fragment_target);
+                    fragment = new MainFragment(R.layout.fragment_activity);
                     break;
                 case 6:
+                    fragment = new MainFragment(R.layout.fragment_plan);
+                    break;
+                case 7:
+                    fragment = new MainFragment(R.layout.fragment_target);
+                    break;
+                case 8:
                     fragment = new MainFragment(R.layout.fragment_done);
                     break;
                 default:
@@ -70,7 +75,7 @@ public class LayoutsActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return 7; // Set the number of fragments you want to display
+            return 9; // Set the number of fragments you want to display
         }
     }
 }

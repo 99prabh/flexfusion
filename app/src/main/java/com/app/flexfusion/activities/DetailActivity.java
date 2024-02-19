@@ -2,12 +2,14 @@ package com.app.flexfusion.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.app.flexfusion.databinding.ActivityDetailBinding;
 import com.app.flexfusion.models.WorkOutModel;
-import com.app.repositories.DatabaseHelper;
+import com.app.flexfusion.repositories.DatabaseHelper;
+import com.app.flexfusion.repositories.Utils;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.squareup.picasso.Picasso;
 
@@ -33,18 +35,18 @@ public class DetailActivity extends AppCompatActivity {
 
 
         }
-        binding.btnDelete.setOnClickListener(v -> {
-            databaseHelper.deleteWorkOutRecord(title, workOutModel.getId()).addOnSuccessListener(new OnSuccessListener<Void>() {
-                @Override
-                public void onSuccess(Void unused) {
-                    startActivity(new Intent(DetailActivity.this, SubCategories.class).putExtra("title",title));
-                    finish();
-                }
+        if (Utils.isAdmin) {
+            binding.btnDelete.setVisibility(View.VISIBLE);
+            binding.btnDelete.setOnClickListener(v -> {
+                databaseHelper.deleteWorkOutRecord(title, workOutModel.getId()).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        startActivity(new Intent(DetailActivity.this, SubCategories.class).putExtra("title", title));
+                        finish();
+                    }
+                });
             });
-        });
-        binding.ivmBack.setOnClickListener(v->{
-            startActivity(new Intent(DetailActivity.this, SubCategories.class).putExtra("title",title));
-            finish();
-        });
+        }
+        binding.ivmBack.setOnClickListener(v -> finish());
     }
 }

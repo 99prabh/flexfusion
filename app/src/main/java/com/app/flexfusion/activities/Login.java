@@ -1,7 +1,5 @@
 package com.app.flexfusion.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -9,7 +7,11 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.app.flexfusion.databinding.ActivityLoginBinding;
+import com.app.flexfusion.repositories.DatabaseHelper;
+import com.app.flexfusion.repositories.Utils;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -26,7 +28,6 @@ public class Login extends AppCompatActivity {
 
     ProgressDialog progressDialog;
 
-    SharedPreferences sharedPreferences;
 
 
     @Override
@@ -41,7 +42,6 @@ public class Login extends AppCompatActivity {
         progressDialog.setMessage("Wait...");
         progressDialog.setCancelable(false);
 
-        sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
 
 
         binding.btnSignin.setOnClickListener(v -> {
@@ -63,22 +63,29 @@ public class Login extends AppCompatActivity {
     }
 
     private void loginUser(String email, String password) {
-        int setupCompleted = sharedPreferences.getInt("setup_completed", 0);
         auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(Login.this, task -> {
             if (task.isSuccessful()) {
-                progressDialog.show();
                 FirebaseUser user = auth.getCurrentUser();
-                if (setupCompleted == 1) {
-                    // Setup is completed, move to home screen
-                    Intent intent = new Intent(Login.this, HomeActivity.class);
-                    startActivity(intent);
-                    finish();
-                } else {
-                    // Setup is not completed, move to setup screens
-                    Intent intent = new Intent(Login.this, Splash2.class);
-                    startActivity(intent);
-                    finish();
+                if (user.getUid().equals(Utils.ADMIN_UID)) {
+                    Utils.isAdmin = true;
                 }
+                new DatabaseHelper().getCurrentUserData().addOnSuccessListener(dataSnapshot -> {
+                    if (dataSnapshot.hasChild("bodyNeedWater") || Utils.isAdmin) {
+                        // Setup is completed, move to home screen
+                        Intent intent = new Intent(Login.this, HomeActivity.class);
+                        startActivity(intent);
+                        finish();
+                    } else {
+                        // Setup is not completed, move to setup screens
+                        Intent intent = new Intent(Login.this, Splash2.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                    progressDialog.dismiss();
+                });
+            } else {
+                progressDialog.dismiss();
+                Toast.makeText(this, "Wrong email or password", Toast.LENGTH_SHORT).show();
             }
 
         });

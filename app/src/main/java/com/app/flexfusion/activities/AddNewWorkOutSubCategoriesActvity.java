@@ -12,9 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.app.flexfusion.databinding.ActivityAddNewWorkOutSubCategoriesActvityBinding;
 import com.app.flexfusion.models.WorkOutModel;
-
-import com.app.repositories.DatabaseHelper;
-import com.app.repositories.Utils;
+import com.app.flexfusion.repositories.DatabaseHelper;
+import com.app.flexfusion.repositories.Utils;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -29,7 +28,7 @@ public class AddNewWorkOutSubCategoriesActvity extends AppCompatActivity {
     String SubCat;
     Uri uri;
     FirebaseStorage store;
-    Utils utils ;
+    Utils utils;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +40,7 @@ public class AddNewWorkOutSubCategoriesActvity extends AppCompatActivity {
         store = FirebaseStorage.getInstance();
         SubCat = getIntent().getStringExtra("title");
         binding.btnSave.setOnClickListener(v -> {
-            utils.showDialogBox("data Added","please wait....");
+            utils.showDialogBox("data Added", "please wait....");
             String workName = binding.tvWorkOutName.getText().toString();
             String Equipment = binding.tvEquipment.getText().toString();
             String Target = binding.tvTargetMuscle.getText().toString();
@@ -64,7 +63,7 @@ public class AddNewWorkOutSubCategoriesActvity extends AppCompatActivity {
                 Toast.makeText(this, "Exercise  filed is Empty", Toast.LENGTH_SHORT).show();
                 return;
             } else {
-                if(uri!=null) {
+                if (uri != null) {
 
                     StorageReference filePath = store.getReference().child("ImagePost").child(uri.getLastPathSegment());
                     filePath.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -78,7 +77,6 @@ public class AddNewWorkOutSubCategoriesActvity extends AppCompatActivity {
                                         @Override
                                         public void onSuccess(Void unused) {
                                             Toast.makeText(AddNewWorkOutSubCategoriesActvity.this, "data added", Toast.LENGTH_SHORT).show();
-                                            startActivity(new Intent(AddNewWorkOutSubCategoriesActvity.this,SubCategories.class).putExtra("title",SubCat));
                                             finish();
                                             utils.cancelDialogBox();
                                         }
@@ -93,15 +91,11 @@ public class AddNewWorkOutSubCategoriesActvity extends AppCompatActivity {
                             });
                         }
                     });
-                }else{
+                } else {
                     utils.cancelDialogBox();
                     Toast.makeText(this, "please add image", Toast.LENGTH_SHORT).show();
                 }
             }
-        });
-        binding.imageView.setOnClickListener(v->{
-            startActivity(new Intent(AddNewWorkOutSubCategoriesActvity.this,SubCategories.class).putExtra("title",SubCat));
-            finish();
         });
 
         binding.imageView.setOnClickListener(v -> {
@@ -109,6 +103,8 @@ public class AddNewWorkOutSubCategoriesActvity extends AppCompatActivity {
             intent.setType("image/*");
             startActivityForResult(intent, 45);
         });
+
+        binding.imvBack.setOnClickListener(v -> finish());
     }
 
     @Override
@@ -120,11 +116,6 @@ public class AddNewWorkOutSubCategoriesActvity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        startActivity(new Intent(AddNewWorkOutSubCategoriesActvity.this,SubCategories.class).putExtra("title",SubCat));
-        finish();
-    }
 }
+
 

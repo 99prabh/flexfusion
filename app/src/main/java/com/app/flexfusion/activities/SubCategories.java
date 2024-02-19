@@ -2,6 +2,7 @@ package com.app.flexfusion.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,7 +11,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.app.flexfusion.adapters.WorkOutAdapter;
 import com.app.flexfusion.databinding.ActivitySubCategoriesBinding;
 import com.app.flexfusion.models.WorkOutModel;
-import com.app.repositories.DatabaseHelper;
+import com.app.flexfusion.repositories.DatabaseHelper;
+import com.app.flexfusion.repositories.Utils;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
@@ -36,31 +38,31 @@ public class SubCategories extends AppCompatActivity {
         title = getIntent().getStringExtra("title");
         binding.tvTitle.setText(title);
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(SubCategories.this, LinearLayoutManager.VERTICAL, false));
-        adapter = new WorkOutAdapter(workOutModelList, SubCategories.this,title);
+        adapter = new WorkOutAdapter(workOutModelList, SubCategories.this, title);
         binding.recyclerView.setAdapter(adapter);
-        binding.btnAddNew.setOnClickListener(v -> {
-            startActivity(new Intent(SubCategories.this, AddNewWorkOutSubCategoriesActvity.class).putExtra("title", title));
-            finish();
-        });
-        binding.imvBack.setOnClickListener(v->{
-            startActivity(new Intent(SubCategories.this, HomeActivity.class).putExtra("title",title));
-            finish();
 
-        });
+        if (Utils.isAdmin) {
+            binding.btnAddNew.setVisibility(View.VISIBLE);
+            binding.btnAddNew.setOnClickListener(v -> {
+                startActivity(new Intent(SubCategories.this, AddNewWorkOutSubCategoriesActvity.class).putExtra("title", title));
+            });
+        }
+        binding.imvBack.setOnClickListener(v -> finish());
         fetchDataToFirebase();
 
     }
 
     private void fetchDataToFirebase() {
-        databaseHelper.getWorkOutData(title).addListenerForSingleValueEvent(new ValueEventListener() {
+        databaseHelper.getWorkOutData(title).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                workOutModelList.clear();
                 for (DataSnapshot snapshot1 : snapshot.getChildren()) {
                     WorkOutModel model = snapshot1.getValue(WorkOutModel.class);
                     model.setId(snapshot1.getKey());
                     workOutModelList.add(model);
-                    adapter.notifyDataSetChanged();
                 }
+                adapter.notifyDataSetChanged();
             }
 
             @Override
@@ -70,11 +72,4 @@ public class SubCategories extends AppCompatActivity {
         });
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        startActivity(new Intent(SubCategories.this, HomeActivity.class).putExtra("title",title));
-        finish();
-
-    }
 }
