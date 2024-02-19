@@ -1,45 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    tools:context=".fragments.WaterFragment">
 
     <ImageView
         android:id="@+id/img_calender"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:src="@drawable/ic_calender"
-        android:padding="10dp"/>
+        android:padding="10dp"
+        android:src="@drawable/ic_calender" />
+
     <ImageView
+        android:id="@+id/imvGraph"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_alignParentRight="true"
-        android:src="@drawable/ic_bold_chart"
-        android:padding="10dp"/>
+        android:padding="10dp"
+        android:src="@drawable/ic_bold_chart" />
+
     <cjh.WaveProgressBarlibrary.WaveProgressBar
         android:id="@+id/waveProgressbar"
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:layout_below="@+id/img_calender"
+        android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_marginTop="105dp"
         app:arc_color="@color/white"
-        app:cavans_bg="#E6E5E5"
-        app:front_wave_color="@color/blue"
-        android:layout_centerHorizontal="true"
-        app:progress="0"
+        app:behind_wave_color="@color/dark_blue"
         app:border_color="@color/blue"
         app:border_width="2dp"
+        app:cavans_bg="#E6E5E5"
+        app:front_wave_color="@color/blue"
+        app:progress="0"
         app:shape="circle"
-        app:behind_wave_color="@color/dark_blue"
         app:text_size="20sp" />
+
     <ImageView
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/img_calender"
-        android:src="@drawable/icon_jar"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/icon_jar" />
 
     <ImageView
         android:id="@+id/ic_add"
@@ -49,33 +54,47 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="70dp"
         android:src="@drawable/ic_add" />
-    <TextView
-        android:id="@+id/tv_water_percentage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0.5L - 25 %"
-        android:textSize="18sp"
 
-        android:layout_below="@id/ic_add"
-        android:paddingHorizontal="20dp"
-        android:layout_marginTop="60dp"
-        android:fontFamily="@font/roboto"/>
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="0.5L - 25 %"
-        android:textColor="#8E8E8E"
-        android:textSize="14sp"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/ic_add"
-        android:paddingHorizontal="20dp"
-        android:layout_marginTop="67dp"
-        android:fontFamily="@font/roboto"/>
-    <ImageView
-        android:layout_width="wrap_content"
+        android:layout_below="@id/ic_add">
+
+        <TextView
+            android:id="@+id/completed_water_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:fontFamily="@font/roboto"
+            android:paddingHorizontal="20dp"
+            tools:text="0.5L - 25 %"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="67dp"
+            android:fontFamily="@font/roboto"
+            android:id="@+id/remaining_water_tv"
+            android:paddingHorizontal="20dp"
+            tools:text="5L"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_level_home"
+        android:layout_below="@id/ll"
+        android:layout_marginHorizontal="20dp"
         android:layout_marginTop="10dp"
-        android:layout_below="@id/tv_water_percentage"
-        android:paddingHorizontal="20dp"/>
+        app:indicatorColor="@color/dark_blue"
+        app:trackCornerRadius="20dp"
+        app:trackThickness="15dp" />
 </RelativeLayout>

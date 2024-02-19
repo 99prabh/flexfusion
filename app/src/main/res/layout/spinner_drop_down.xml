@@ -10,4 +10,4 @@
     android:text="qw"
     android:textSize="28sp"
     android:textAlignment="center"
-    android:textColor="@color/gray"/>
+    android:textColor="@color/gray" />

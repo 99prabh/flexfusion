@@ -10,52 +10,55 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        >
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_level"
-            android:layout_margin="1dp"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_level"
-            android:layout_margin="1dp"/>
+        android:layout_marginTop="20dp">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_level"
-            android:layout_margin="1dp"/>
+            android:layout_margin="1dp" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_level"
-            android:layout_margin="1dp"/>
+            android:layout_margin="1dp" />
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_level"
-            android:layout_margin="1dp"/>
+            android:layout_margin="1dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_level"
+            android:layout_margin="1dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_level"
+            android:layout_margin="1dp" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
-            android:src="@drawable/ic_level"/>
+            android:src="@drawable/ic_level" />
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_level_number"
-            android:layout_margin="1dp"/>
+            android:layout_margin="1dp" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
-            android:src="@drawable/ic_level_number"/>
+            android:src="@drawable/ic_level_number" />
     </LinearLayout>
 
     <TextView
@@ -67,7 +70,7 @@
         android:layout_centerHorizontal="true"
         android:textSize="28sp"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/roboto_medium"/>
+        android:fontFamily="@font/roboto_medium" />
 
     <TextView
         android:id="@+id/tv_name_for_profile"
@@ -80,7 +83,7 @@
         android:layout_centerHorizontal="true"
         android:textSize="20sp"
         android:layout_marginTop="5dp"
-        android:fontFamily="@font/roboto"/>
+        android:fontFamily="@font/roboto" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -89,17 +92,20 @@
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:orientation="vertical">
+
         <RelativeLayout
             android:id="@+id/RelativeLess"
             android:layout_width="match_parent"
             android:layout_height="82dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/round_corners">
+
             <TextView
                 android:id="@+id/trans_Less"
                 android:layout_width="match_parent"
                 android:layout_height="85dp"
                 android:background="@drawable/round_blue_layout" />
+
             <TextView
                 android:id="@+id/tv_less_activity"
                 android:layout_width="wrap_content"
@@ -129,6 +135,7 @@
             android:layout_height="82dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/round_corners">
+
             <TextView
                 android:id="@+id/trans_moderate"
                 android:layout_width="match_parent"
@@ -144,7 +151,7 @@
                 android:fontFamily="@font/roboto"
                 android:text="Moderate Activity"
                 android:textSize="20sp"
-                android:paddingTop="5dp"/>
+                android:paddingTop="5dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -165,6 +172,7 @@
             android:layout_height="82dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/round_corners">
+
             <TextView
                 android:id="@+id/trans_very"
                 android:layout_width="match_parent"
@@ -181,6 +189,7 @@
                 android:text="Very Active"
                 android:paddingTop="5dp"
                 android:textSize="20sp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -195,6 +204,7 @@
         </RelativeLayout>
 
     </LinearLayout>
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_activity"
         android:layout_width="match_parent"

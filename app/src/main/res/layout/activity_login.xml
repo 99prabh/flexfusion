@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.Login"
-    android:padding="10dp">
+    android:padding="10dp"
+    tools:context=".activities.Login">
+
     <RelativeLayout
         android:id="@+id/lytSplash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        >
+        android:layout_marginTop="50dp">
+
         <ImageView
             android:id="@+id/img_splash"
             android:layout_width="wrap_content"
@@ -23,31 +23,30 @@
             android:id="@+id/tv_flexfusion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_medium"
-            android:textSize="32sp"
-            android:text="FlexFusion"
             android:layout_below="@id/img_splash"
             android:layout_centerHorizontal="true"
-            />
+            android:fontFamily="@font/roboto_medium"
+            android:text="FlexFusion"
+            android:textSize="32sp" />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/lytSplash"
-        android:padding="20dp"
-        >
+        android:padding="20dp">
+
         <EditText
             android:id="@+id/et_Email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:hint="Email"
-            android:textSize="14sp"
-            android:fontFamily="@font/roboto"
             android:background="@drawable/round_corners"
+            android:fontFamily="@font/roboto"
+            android:hint="Email"
             android:inputType="text"
-            android:padding="15dp" />
+            android:padding="15dp"
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/et_password"
@@ -62,42 +61,34 @@
             android:padding="15dp"
             android:textSize="14sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/et_password"
-            android:layout_alignParentRight="true"
-            android:text="Forget Password?"
-            android:textSize="12sp"
-            android:fontFamily="@font/roboto"
-            android:textColor="#9FA5BB"
-            android:layout_marginTop="3dp"/>
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_Signin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sign In"
-            android:textSize="16sp"
+            android:layout_below="@id/et_password"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/custom_button"
+            android:drawableRight="@drawable/ic_button"
             android:fontFamily="@font/roboto_medium"
             android:paddingVertical="12dp"
-            android:layout_below="@id/et_password"
-            android:textColor="@color/white"
-            android:layout_marginTop="30dp"
             android:paddingRight="20dp"
-            android:drawableRight="@drawable/ic_button"
-            android:background="@drawable/custom_button"
+            android:text="Sign In"
             android:textAlignment="center"
-            />
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
         <TextView
             android:id="@+id/tv_SignIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/btn_Signin"
             android:layout_centerHorizontal="true"
-            android:text="Don’t have an account? Sign Up"
-            android:textSize="12sp"
+            android:layout_marginTop="7dp"
             android:fontFamily="@font/roboto"
+            android:text="Don’t have an account? Sign Up"
             android:textColor="@color/black"
-            android:layout_marginTop="7dp"/>
+            android:textSize="12sp" />
     </RelativeLayout>
 
 </RelativeLayout>

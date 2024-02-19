@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
+
     <TextView
         android:id="@+id/tv_profile"
         android:layout_width="wrap_content"
@@ -14,14 +12,16 @@
         android:textSize="20sp"
         android:textColor="@color/black"
         android:layout_marginTop="10dp"
-        android:fontFamily="@font/roboto_medium"/>
+        android:fontFamily="@font/roboto_medium" />
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:id="@+id/line"
         android:layout_marginTop="3dp"
         android:background="#707070"
-        android:layout_below="@id/tv_profile"/>
+        android:layout_below="@id/tv_profile" />
+
     <ImageView
         android:id="@+id/img_profile_pic"
         android:layout_width="100dp"
@@ -29,7 +29,8 @@
         android:layout_below="@id/line"
         android:layout_centerHorizontal="true"
         android:src="@drawable/icon_default_profile"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp" />
+
     <TextView
         android:id="@+id/tv_name_profile"
         android:layout_width="wrap_content"
@@ -39,8 +40,8 @@
         android:layout_marginTop="8dp"
         android:text="Ashish Chutake"
         android:textSize="20sp"
-        android:fontFamily="@font/roboto_medium"
-        />
+        android:fontFamily="@font/roboto_medium" />
+
     <TextView
         android:id="@+id/tv_email_profile"
         android:layout_width="wrap_content"
@@ -49,38 +50,36 @@
         android:layout_centerHorizontal="true"
         android:text="ashishuxuid@gmail.com"
         android:textSize="14sp"
-        android:fontFamily="@font/roboto_medium"
-        />
+        android:fontFamily="@font/roboto_medium" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="30dp"
         android:layout_below="@id/tv_email_profile"
-        android:layout_marginHorizontal="10dp"
-        >
+        android:layout_marginHorizontal="10dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
             android:layout_marginTop="5dp"
-            android:background="@drawable/round_corners"
-            >
+            android:background="@drawable/round_corners">
 
             <ImageView
                 android:id="@+id/ic_weight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_age" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Weight"
                 android:layout_toRightOf="@id/ic_weight"
                 android:paddingHorizontal="20dp"
-                android:fontFamily="@font/roboto_bold"
-                />
+                android:fontFamily="@font/roboto_bold" />
 
             <TextView
                 android:id="@+id/tvWeight"
@@ -91,27 +90,28 @@
                 android:paddingHorizontal="20dp"
                 android:text="85" />
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
             android:layout_marginTop="5dp"
-            android:background="@drawable/round_corners"
-            >
+            android:background="@drawable/round_corners">
+
             <ImageView
                 android:id="@+id/ic_height"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_age"
-                />
+                android:src="@drawable/ic_age" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Height"
                 android:layout_toRightOf="@id/ic_height"
                 android:paddingHorizontal="20dp"
-                android:fontFamily="@font/roboto_bold"
-                />
+                android:fontFamily="@font/roboto_bold" />
+
             <TextView
                 android:id="@+id/tvHeight"
                 android:layout_width="wrap_content"
@@ -119,8 +119,9 @@
                 android:text="6 Ft  4 Inch"
                 android:layout_alignParentRight="true"
                 android:paddingHorizontal="20dp"
-                android:fontFamily="@font/roboto_bold"/>
+                android:fontFamily="@font/roboto_bold" />
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -151,27 +152,28 @@
                 android:paddingHorizontal="20dp"
                 android:text="28" />
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
             android:layout_marginTop="5dp"
-            android:background="@drawable/round_corners"
-            >
+            android:background="@drawable/round_corners">
+
             <ImageView
                 android:id="@+id/ic_gender"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_age"
-                />
+                android:src="@drawable/ic_age" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Gender"
                 android:layout_toRightOf="@id/ic_gender"
                 android:paddingHorizontal="20dp"
-                android:fontFamily="@font/roboto_bold"
-                />
+                android:fontFamily="@font/roboto_bold" />
+
             <TextView
                 android:id="@+id/tvGender"
                 android:layout_width="wrap_content"
@@ -179,30 +181,30 @@
                 android:text="Male"
                 android:layout_alignParentRight="true"
                 android:paddingHorizontal="20dp"
-                android:fontFamily="@font/roboto_bold"
-                />
+                android:fontFamily="@font/roboto_bold" />
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
             android:layout_marginTop="5dp"
-            android:background="@drawable/round_corners"
-            >
+            android:background="@drawable/round_corners">
+
             <ImageView
                 android:id="@+id/ic_goals"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_goal"
-                />
+                android:src="@drawable/ic_goal" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Goals"
                 android:layout_toRightOf="@id/ic_goals"
                 android:paddingHorizontal="20dp"
-                android:fontFamily="@font/roboto_bold"
-                />
+                android:fontFamily="@font/roboto_bold" />
+
             <TextView
                 android:id="@+id/tvTargetWeight"
                 android:layout_width="wrap_content"
@@ -210,30 +212,30 @@
                 android:text="65 Kg"
                 android:layout_alignParentRight="true"
                 android:paddingHorizontal="20dp"
-                android:fontFamily="@font/roboto_bold"
-                />
+                android:fontFamily="@font/roboto_bold" />
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
             android:layout_marginTop="5dp"
-            android:background="@drawable/round_corners"
-            >
+            android:background="@drawable/round_corners">
+
             <ImageView
                 android:id="@+id/ic_plans"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_plans"
-                />
+                android:src="@drawable/ic_plans" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Plans"
                 android:layout_toRightOf="@id/ic_plans"
                 android:paddingHorizontal="20dp"
-                android:fontFamily="@font/roboto_bold"
-                />
+                android:fontFamily="@font/roboto_bold" />
+
             <TextView
                 android:id="@+id/tvWeightPlan"
                 android:layout_width="wrap_content"
@@ -241,13 +243,11 @@
                 android:text="Weight Loss"
                 android:layout_alignParentRight="true"
                 android:paddingHorizontal="20dp"
-                android:fontFamily="@font/roboto_bold"
-                />
+                android:fontFamily="@font/roboto_bold" />
         </RelativeLayout>
 
 
     </LinearLayout>
-
 
 
 </RelativeLayout>

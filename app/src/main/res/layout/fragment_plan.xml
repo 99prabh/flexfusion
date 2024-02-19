@@ -2,58 +2,62 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <LinearLayout
         android:id="@+id/lyt_img_levels"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        >
-        <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_level"
-        android:layout_margin="1dp"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_level"
-            android:layout_margin="1dp"/>
+        android:layout_marginTop="20dp">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_level"
-            android:layout_margin="1dp"/>
+            android:layout_margin="1dp" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_level"
-            android:layout_margin="1dp"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_level"
-            android:layout_margin="1dp"/>
+            android:layout_margin="1dp" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="1dp"
-            android:src="@drawable/ic_level"/>
+            android:src="@drawable/ic_level"
+            android:layout_margin="1dp" />
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_level"
-            android:layout_margin="1dp"/>
+            android:layout_margin="1dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_level"
+            android:layout_margin="1dp" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
-            android:src="@drawable/ic_level_number"/>
+            android:src="@drawable/ic_level" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_level"
+            android:layout_margin="1dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:src="@drawable/ic_level_number" />
     </LinearLayout>
 
     <TextView
@@ -65,7 +69,8 @@
         android:layout_centerHorizontal="true"
         android:textSize="22sp"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/roboto_medium"/>
+        android:fontFamily="@font/roboto_medium" />
+
     <TextView
         android:id="@+id/tv_about_plan"
         android:layout_width="wrap_content"
@@ -77,15 +82,15 @@
         android:layout_centerHorizontal="true"
         android:textSize="20sp"
         android:layout_marginTop="5dp"
-        android:fontFamily="@font/roboto"/>
+        android:fontFamily="@font/roboto" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_margin="10dp"
-        android:layout_centerInParent="true"
-        >
+        android:layout_centerInParent="true">
+
         <RelativeLayout
             android:id="@+id/lyt_weight_loose"
             android:layout_width="wrap_content"
@@ -105,13 +110,15 @@
                 android:gravity="right"
                 android:layout_centerVertical="true"
                 android:layout_marginHorizontal="40dp"
-                android:textSize="15sp"/>
+                android:textSize="15sp" />
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
-                android:src="@drawable/img_weightloose"/>
+                android:src="@drawable/img_weightloose" />
         </RelativeLayout>
+
         <RelativeLayout
             android:id="@+id/lyt_weight_gain"
             android:layout_width="wrap_content"
@@ -119,6 +126,7 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:background="@drawable/round_corners">
+
             <TextView
                 android:id="@+id/tvWeightGain"
                 android:layout_width="match_parent"
@@ -128,14 +136,16 @@
                 android:padding="10dp"
                 android:layout_centerVertical="true"
                 android:layout_marginHorizontal="40dp"
-                android:textSize="15sp"/>
+                android:textSize="15sp" />
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
                 android:layout_alignParentRight="true"
-                android:src="@drawable/img_weightgain"/>
+                android:src="@drawable/img_weightgain" />
         </RelativeLayout>
+
         <RelativeLayout
             android:id="@+id/lyt_build_muscles"
             android:layout_width="wrap_content"
@@ -155,12 +165,14 @@
                 android:layout_centerVertical="true"
                 android:padding="10dp"
                 android:layout_marginHorizontal="40dp"
-                android:textSize="15sp"/>
+                android:textSize="15sp" />
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/img_build_muscles"/>
+                android:src="@drawable/img_build_muscles" />
         </RelativeLayout>
+
         <RelativeLayout
             android:id="@+id/lyt_get_toned"
             android:layout_width="wrap_content"
@@ -168,6 +180,7 @@
             android:padding="10dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/round_corners">
+
             <TextView
                 android:id="@+id/tvGetToned"
                 android:layout_width="match_parent"
@@ -177,13 +190,14 @@
                 android:padding="10dp"
                 android:layout_centerVertical="true"
                 android:layout_marginHorizontal="40dp"
-                android:textSize="15sp"/>
+                android:textSize="15sp" />
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_marginHorizontal="20dp"
-                android:src="@drawable/img_get_toned"/>
+                android:src="@drawable/img_get_toned" />
         </RelativeLayout>
     </LinearLayout>
 
@@ -200,7 +214,6 @@
         android:textColor="@color/white"
         android:layout_marginBottom="30dp"
         android:background="@drawable/custom_button"
-        android:textAlignment="center"
-        />
+        android:textAlignment="center" />
 
 </RelativeLayout>

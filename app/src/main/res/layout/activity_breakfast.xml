@@ -1,44 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.DietsActivity">
+
     <TextView
         android:id="@+id/tv_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Breakfast"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:textSize="20sp"
-        android:padding="5dp"
         android:fontFamily="@font/roboto_medium"
-        />
+        android:padding="5dp"
+        android:text="Breakfast"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/ivAddFood"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_above="@+id/view_line"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_add"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/view_line"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/icon_back" />
+
     <View
         android:id="@+id/view_line"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#707070"
         android:layout_below="@id/tv_text"
-        />
+        android:background="#707070" />
+
     <EditText
         android:id="@+id/edtSearchBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/view_line"
+        android:layout_marginHorizontal="20dp"
         android:layout_marginTop="10dp"
-        android:hint="Search"
+        android:background="@drawable/round_corners"
         android:drawableLeft="@drawable/ic_search"
         android:drawablePadding="10dp"
-        android:layout_marginHorizontal="20dp"
-        android:background="@drawable/round_corners"
-        android:padding="9dp"/>
+        android:hint="Search"
+        android:padding="9dp" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewDiets"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/edtSearchBar"
-        android:padding="10dp"/>
+        android:padding="10dp" />
 </RelativeLayout>

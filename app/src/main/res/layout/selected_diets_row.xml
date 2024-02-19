@@ -4,13 +4,15 @@
     android:layout_height="wrap_content"
     android:paddingHorizontal="20dp"
     android:paddingVertical="10dp">
+
     <TextView
         android:id="@+id/tv_diet_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Egg (Fried)"
         android:textSize="12sp"
-        android:fontFamily="@font/roboto"/>
+        android:fontFamily="@font/roboto" />
+
     <TextView
         android:id="@+id/tv_selected_size"
         android:layout_width="wrap_content"
@@ -20,13 +22,15 @@
         android:fontFamily="@font/roboto_light"
         android:text="1 Whole (25 g)"
         android:textSize="12sp" />
+
     <ImageView
         android:id="@+id/ic_cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:src="@drawable/ic_cancel"
-        android:paddingVertical="6dp"/>
+        android:paddingVertical="6dp" />
+
     <TextView
         android:id="@+id/tvCal"
         android:layout_width="wrap_content"
@@ -36,5 +40,5 @@
         android:textSize="12sp"
         android:fontFamily="@font/roboto"
         android:layout_toLeftOf="@id/ic_cancel"
-        android:paddingHorizontal="20dp"/>
+        android:paddingHorizontal="20dp" />
 </RelativeLayout>

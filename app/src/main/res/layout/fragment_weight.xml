@@ -3,57 +3,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp">
+
     <LinearLayout
         android:id="@+id/lyt_img_levels"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        > <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_level"
-        android:layout_margin="1dp"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_level"
-            android:layout_margin="1dp"/>
+        android:layout_marginTop="20dp">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_level"
-            android:layout_margin="1dp"/>
+            android:layout_margin="1dp" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_level"
-            android:layout_margin="1dp"/>
+            android:layout_margin="1dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_level"
+            android:layout_margin="1dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_level"
+            android:layout_margin="1dp" />
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_level_number"
-            android:layout_margin="1dp"/>
+            android:layout_margin="1dp" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
-            android:src="@drawable/ic_level_number"/>
+            android:src="@drawable/ic_level_number" />
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_level_number"
-            android:layout_margin="1dp"/>
+            android:layout_margin="1dp" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
-            android:src="@drawable/ic_level_number"/>
+            android:src="@drawable/ic_level_number" />
     </LinearLayout>
 
     <TextView
@@ -65,7 +70,7 @@
         android:layout_centerHorizontal="true"
         android:textSize="28sp"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/roboto_medium"/>
+        android:fontFamily="@font/roboto_medium" />
 
 
     <TextView
@@ -79,7 +84,7 @@
         android:textAlignment="center"
         android:padding="10dp"
         android:layout_marginTop="5dp"
-        android:fontFamily="@font/roboto"/>
+        android:fontFamily="@font/roboto" />
 
     <Spinner
         android:id="@+id/spinnerWeight"
@@ -110,6 +115,7 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="28sp" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_weight"
         android:layout_width="match_parent"
@@ -123,10 +129,7 @@
         android:textColor="@color/white"
         android:layout_marginBottom="30dp"
         android:background="@drawable/custom_button"
-        android:textAlignment="center"
-        />
-
-
+        android:textAlignment="center" />
 
 
 </RelativeLayout>

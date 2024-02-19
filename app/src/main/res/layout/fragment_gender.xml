@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
-    >
+    android:padding="10dp">
 
     <LinearLayout
         android:id="@+id/lyt_img_levels"
@@ -13,51 +10,55 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        > <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_level"
-        android:layout_margin="1dp"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_level"
-            android:layout_margin="1dp"/>
+        android:layout_marginTop="20dp">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_level"
-            android:layout_margin="1dp"/>
+            android:layout_margin="1dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_level"
+            android:layout_margin="1dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_level"
+            android:layout_margin="1dp" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_level_number"
-            android:layout_margin="1dp"/>
+            android:layout_margin="1dp" />
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_level_number"
-            android:layout_margin="1dp"/>
+            android:layout_margin="1dp" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
-            android:src="@drawable/ic_level_number"/>
+            android:src="@drawable/ic_level_number" />
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_level_number"
-            android:layout_margin="1dp"/>
+            android:layout_margin="1dp" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
-            android:src="@drawable/ic_level_number"/>
+            android:src="@drawable/ic_level_number" />
     </LinearLayout>
 
     <TextView
@@ -69,7 +70,7 @@
         android:layout_centerHorizontal="true"
         android:textSize="28sp"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/roboto_medium"/>
+        android:fontFamily="@font/roboto_medium" />
 
     <TextView
         android:id="@+id/tv_name_for_profile"
@@ -82,7 +83,7 @@
         android:layout_centerHorizontal="true"
         android:textSize="20sp"
         android:layout_marginTop="5dp"
-        android:fontFamily="@font/roboto"/>
+        android:fontFamily="@font/roboto" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -90,10 +91,12 @@
         android:layout_centerInParent="true"
         android:padding="10dp"
         android:orientation="vertical">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round_corners">
+
             <TextView
                 android:id="@+id/tv_male"
                 android:layout_width="match_parent"
@@ -104,6 +107,7 @@
                 android:text="Male"
                 android:padding="14dp"
                 android:textSize="28sp" />
+
             <ImageView
                 android:id="@+id/ivMaleBlue"
                 android:layout_width="wrap_content"
@@ -111,7 +115,8 @@
                 android:src="@drawable/ic_male"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:paddingRight="15dp"/>
+                android:paddingRight="15dp" />
+
             <ImageView
                 android:id="@+id/ivMaleGray"
                 android:layout_width="wrap_content"
@@ -120,14 +125,16 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:visibility="gone"
-                android:paddingRight="15dp"/>
+                android:paddingRight="15dp" />
 
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round_corners"
             android:layout_marginTop="20dp">
+
             <TextView
                 android:id="@+id/tvFemale"
                 android:layout_width="match_parent"
@@ -139,6 +146,7 @@
                 android:textColor="@color/gray"
                 android:padding="14dp"
                 android:textSize="28sp" />
+
             <ImageView
                 android:id="@+id/ivFemaleGray"
                 android:layout_width="wrap_content"
@@ -146,7 +154,8 @@
                 android:src="@drawable/ic_female"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:paddingRight="15dp"/>
+                android:paddingRight="15dp" />
+
             <ImageView
                 android:id="@+id/ivFemaleBlue"
                 android:layout_width="wrap_content"
@@ -155,9 +164,10 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:visibility="gone"
-                android:paddingRight="15dp"/>
+                android:paddingRight="15dp" />
 
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -175,6 +185,7 @@
                 android:padding="14dp"
                 android:text="Other"
                 android:textSize="28sp" />
+
             <ImageView
                 android:id="@+id/ivOtherGray"
                 android:layout_width="wrap_content"
@@ -182,7 +193,8 @@
                 android:src="@drawable/ic_other"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:paddingRight="15dp"/>
+                android:paddingRight="15dp" />
+
             <ImageView
                 android:id="@+id/ivOtherBlue"
                 android:layout_width="wrap_content"
@@ -191,11 +203,12 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:visibility="gone"
-                android:paddingRight="15dp"/>
+                android:paddingRight="15dp" />
 
         </RelativeLayout>
 
     </LinearLayout>
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_gender"
         android:layout_width="match_parent"

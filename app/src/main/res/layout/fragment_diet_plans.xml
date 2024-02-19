@@ -2,49 +2,61 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <TextView
+                android:id="@+id/tv_diet_plans"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/tv_diet_plans"
-                android:text="Diet Plans"
-                android:textSize="20sp"
-                android:padding="5dp"
-                android:fontFamily="@font/roboto_medium"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
-                />
+                android:fontFamily="@font/roboto_medium"
+                android:padding="5dp"
+                android:text="Diet Plans"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imvGraph"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:padding="10dp"
+                android:src="@drawable/ic_bold_chart" />
+
             <View
                 android:id="@+id/view_line"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#707070"
                 android:layout_below="@id/tv_diet_plans"
-                />
+                android:background="#707070" />
+
             <RelativeLayout
                 android:id="@+id/lyt_dietplans"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/view_line"
                 android:background="#CDE8FE"
-                android:paddingVertical="5dp"
-                android:layout_below="@id/view_line">
+                android:paddingVertical="5dp">
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/img_apple"
-                    android:layout_alignParentRight="true"/>
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/img_apple" />
+
                 <LinearLayout
                     android:id="@+id/lyt_eaten"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingHorizontal="20dp"
-                    >
+                    android:paddingHorizontal="20dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -53,217 +65,238 @@
                         android:text="Eaten"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
+
                     <TextView
+                        android:id="@+id/tvEatenCalories"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="16sp"
                         android:layout_marginTop="2dp"
-                        android:textColor="@color/black"
                         android:fontFamily="@font/roboto"
-                        android:text="00 Cal"/>
+                        android:text="00 Cal"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:id="@+id/lyt_remaining"
                     android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_below="@id/lyt_eaten"
                     android:layout_marginTop="5dp"
-                    android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingHorizontal="20dp"
-                    >
+                    android:paddingHorizontal="20dp">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Remaining"
-                        android:textSize="16sp"
-                        android:textColor="@color/black"
                         android:fontFamily="@font/roboto_bold"
-                        />
+                        android:text="Remaining"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
                     <TextView
+                        android:id="@+id/tvRemaining"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/black"
                         android:layout_marginTop="2dp"
-                        android:textSize="16sp"
                         android:fontFamily="@font/roboto"
-                        android:text="1200 Cal"/>
+                        android:text="1200 Cal"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:id="@+id/lyt_total"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginTop="5dp"
                     android:layout_below="@id/lyt_remaining"
-                    android:paddingHorizontal="20dp"
-                    >
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="20dp">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
                         android:text="Total"
                         android:textColor="@color/black"
-                        android:textSize="16sp"
-                        android:fontFamily="@font/roboto_bold"
-                        />
+                        android:textSize="16sp" />
+
                     <TextView
+                        android:id="@+id/total_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="16sp"
-                        android:textColor="@color/black"
                         android:layout_marginTop="2dp"
                         android:fontFamily="@font/roboto"
-                        android:text="1200 Cal"/>
+                        android:text="1200 Cal"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
                 </LinearLayout>
             </RelativeLayout>
+
             <RelativeLayout
                 android:id="@+id/lyt_breakfast"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/lyt_dietplans"
-                android:layout_marginTop="15dp"
                 android:layout_marginHorizontal="10dp"
-                android:background="@drawable/round_corners"
-                >
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_corners">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Breakfast"
-                    android:textSize="14sp"
                     android:fontFamily="@font/roboto_bold"
+                    android:padding="20dp"
+                    android:text="Breakfast"
                     android:textColor="@color/black"
-                    android:padding="20dp"/>
+                    android:textSize="14sp" />
+
                 <ImageView
                     android:id="@+id/ivAddBreakfast"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:src="@drawable/icon_add_diet"
                     android:padding="20dp"
-                    />
+                    android:src="@drawable/icon_add_diet" />
+
                 <View
                     android:id="@+id/v1"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/gray"
-                    android:layout_below="@+id/ivAddBreakfast"/>
+                    android:layout_below="@+id/ivAddBreakfast"
+                    android:background="@color/gray" />
+
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycleViewBreakfast"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/v1"
-                    android:padding="10dp"/>
+                    android:padding="10dp" />
 
             </RelativeLayout>
+
             <RelativeLayout
                 android:id="@+id/lyt_lunch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/lyt_breakfast"
-                android:layout_marginTop="10dp"
                 android:layout_marginHorizontal="10dp"
-                android:background="@drawable/round_corners"
-                >
+                android:layout_marginTop="10dp"
+                android:background="@drawable/round_corners">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Lunch"
-                    android:textSize="14sp"
                     android:fontFamily="@font/roboto_bold"
+                    android:padding="20dp"
+                    android:text="Lunch"
                     android:textColor="@color/black"
-                    android:padding="20dp"/>
+                    android:textSize="14sp" />
+
                 <ImageView
                     android:id="@+id/ivAddLunch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:src="@drawable/icon_add_diet"
-                    android:padding="20dp"/>
+                    android:padding="20dp"
+                    android:src="@drawable/icon_add_diet" />
+
                 <View
                     android:id="@+id/v2"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/gray"
-                    android:layout_below="@+id/ivAddLunch"/>
+                    android:layout_below="@+id/ivAddLunch"
+                    android:background="@color/gray" />
+
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycleViewLunch"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/ivAddLunch"
-                    android:padding="10dp"/>
+                    android:padding="10dp" />
             </RelativeLayout>
+
             <RelativeLayout
                 android:id="@+id/lyt_dinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/lyt_lunch"
-                android:layout_marginTop="10dp"
                 android:layout_marginHorizontal="10dp"
-                android:background="@drawable/round_corners"
-                >
+                android:layout_marginTop="10dp"
+                android:background="@drawable/round_corners">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Dinner"
-                    android:textSize="14sp"
                     android:fontFamily="@font/roboto_bold"
+                    android:padding="20dp"
+                    android:text="Dinner"
                     android:textColor="@color/black"
-                    android:padding="20dp"/>
+                    android:textSize="14sp" />
+
                 <ImageView
                     android:id="@+id/ivAddDinner"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:src="@drawable/icon_add_diet"
-                    android:padding="20dp"/>
+                    android:padding="20dp"
+                    android:src="@drawable/icon_add_diet" />
+
                 <View
                     android:id="@+id/v3"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/gray"
-                    android:layout_below="@+id/ivAddDinner"/>
+                    android:layout_below="@+id/ivAddDinner"
+                    android:background="@color/gray" />
+
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycleViewDinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/ivAddDinner"
-                    android:padding="10dp"/>
+                    android:padding="10dp" />
             </RelativeLayout>
+
             <RelativeLayout
                 android:id="@+id/lyt_snacks"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/lyt_dinner"
-                android:layout_marginTop="10dp"
                 android:layout_marginHorizontal="10dp"
-                android:background="@drawable/round_corners"
-                >
+                android:layout_marginTop="10dp"
+                android:background="@drawable/round_corners">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Snacks"
-                    android:textSize="14sp"
                     android:fontFamily="@font/roboto_bold"
+                    android:padding="20dp"
+                    android:text="Snacks"
                     android:textColor="@color/black"
-                    android:padding="20dp"/>
+                    android:textSize="14sp" />
+
                 <ImageView
                     android:id="@+id/ivAddSnacks"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:src="@drawable/icon_add_diet"
-                    android:padding="20dp"/>
+                    android:padding="20dp"
+                    android:src="@drawable/icon_add_diet" />
+
                 <View
                     android:id="@+id/v4"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/gray"
-                    android:layout_below="@+id/ivAddSnacks"/>
+                    android:layout_below="@+id/ivAddSnacks"
+                    android:background="@color/gray" />
+
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycleViewSnacks"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/ivAddSnacks"
-                    android:padding="10dp"/>
+                    android:padding="10dp" />
             </RelativeLayout>
         </RelativeLayout>
     </ScrollView>
