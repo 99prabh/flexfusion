@@ -1,35 +1,33 @@
 package com.app.flexfusion.models;
-import android.os.Parcel;
-import android.os.Parcelable;
 
-public class DietItems implements Parcelable {
+
+import java.io.Serializable;
+
+public class DietItems implements Serializable {
+
     private String name;
-    private String calories;
+
+    String servName;
+    private int calories;
     private String size;
 
-    public DietItems(String name, String calories, String size) {
+    public DietItems() {
+    }
+
+    public DietItems(String name, String servName, int calories, String size) {
         this.name = name;
+        this.servName = servName;
         this.calories = calories;
         this.size = size;
     }
 
-    protected DietItems(Parcel in) {
-        name = in.readString();
-        calories = in.readString();
-        size = in.readString();
+    public String getServName() {
+        return servName;
     }
 
-    public static final Creator<DietItems> CREATOR = new Creator<DietItems>() {
-        @Override
-        public DietItems createFromParcel(Parcel in) {
-            return new DietItems(in);
-        }
-
-        @Override
-        public DietItems[] newArray(int size) {
-            return new DietItems[size];
-        }
-    };
+    public void setServName(String servName) {
+        this.servName = servName;
+    }
 
     public String getName() {
         return name;
@@ -39,11 +37,11 @@ public class DietItems implements Parcelable {
         this.name = name;
     }
 
-    public String getCalories() {
+    public int getCalories() {
         return calories;
     }
 
-    public void setCalories(String calories) {
+    public void setCalories(int calories) {
         this.calories = calories;
     }
 
@@ -53,17 +51,5 @@ public class DietItems implements Parcelable {
 
     public void setSize(String size) {
         this.size = size;
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(name);
-        dest.writeString(calories);
-        dest.writeString(size);
     }
 }

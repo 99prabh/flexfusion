@@ -11,23 +11,39 @@ public class ProfileDetails {
     String height;
     String plan;
     String targeted_weight;
+    double bodyNeedWater;
+    double eatenCalories;
+
+    public double getTotalBodyKal() {
+        return totalBodyKal;
+    }
+
+    public void setTotalBodyKal(double totalBodyKal) {
+        this.totalBodyKal = totalBodyKal;
+    }
+
+    public double getEatenCalories() {
+        return eatenCalories;
+    }
+
+    public void setEatenCalories(double eatenCalories) {
+        this.eatenCalories = eatenCalories;
+    }
+
+    double totalBodyKal;
+
+    public double getBodyNeedWater() {
+        return bodyNeedWater;
+    }
+
+    public void setBodyNeedWater(double bodyNeedWater) {
+        this.bodyNeedWater = bodyNeedWater;
+    }
+
 
     String Image;
 
-
-    public ProfileDetails(){
-
-    }
-
-    public ProfileDetails(String id,String name, String age, String gender, String weight, String height, String plan, String targeted_weight) {
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
-        this.weight = weight;
-        this.height = height;
-        this.plan = plan;
-        this.targeted_weight = targeted_weight;
-        this.userId=id;
+    public ProfileDetails() {
     }
 
     public ProfileDetails(String name, String age, String gender, String weight, String height, String plan, String targeted_weight) {
@@ -39,6 +55,7 @@ public class ProfileDetails {
         this.plan = plan;
         this.targeted_weight = targeted_weight;
     }
+
 
     public String getUserId() {
         return userId;
@@ -63,6 +80,7 @@ public class ProfileDetails {
     public void setId(String id) {
         this.userId = id;
     }
+
 
     public String getName() {
         return name;
@@ -119,4 +137,5 @@ public class ProfileDetails {
     public void setTargeted_weight(String targeted_weight) {
         this.targeted_weight = targeted_weight;
     }
+
 }
