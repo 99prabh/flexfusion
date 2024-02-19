@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "144569198171",
+    "firebase_url": "https://flexfusion-app-6ee2f-default-rtdb.firebaseio.com",
+    "project_id": "flexfusion-app-6ee2f",
+    "storage_bucket": "flexfusion-app-6ee2f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:144569198171:android:8a17b21b5c61bb9fff017e",
+        "android_client_info": {
+          "package_name": "com.app.flexfusion"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmwEXF6XT92mG93-1XLYA3Y6OSpQqwkbg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
