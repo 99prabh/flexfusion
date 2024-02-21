@@ -40,7 +40,7 @@ public class AddNewWorkOutSubCategoriesActvity extends AppCompatActivity {
         store = FirebaseStorage.getInstance();
         SubCat = getIntent().getStringExtra("title");
         binding.btnSave.setOnClickListener(v -> {
-            utils.showDialogBox("data Added", "please wait....");
+            utils.showDialogBox("Adding workout", "please wait....");
             String workName = binding.tvWorkOutName.getText().toString();
             String Equipment = binding.tvEquipment.getText().toString();
             String Target = binding.tvTargetMuscle.getText().toString();

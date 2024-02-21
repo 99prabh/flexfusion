@@ -68,7 +68,7 @@ public class SignUp extends AppCompatActivity {
                 progressDialog.hide();
                 FirebaseUser user = auth.getCurrentUser();
                 // Save user's name to Realtime Database
-                saveUserNameToDatabase(name, email);
+//                saveUserNameToDatabase(name, email);
                 Toast.makeText(SignUp.this, "User Registered Successfully!", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(SignUp.this, Login.class);
                 startActivity(intent);

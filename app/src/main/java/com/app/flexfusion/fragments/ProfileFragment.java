@@ -19,8 +19,10 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.app.flexfusion.R;
+import com.app.flexfusion.activities.Login;
 import com.app.flexfusion.models.ProfileDetails;
 import com.app.flexfusion.repositories.DatabaseHelper;
+import com.app.flexfusion.repositories.Utils;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -121,6 +123,12 @@ public class ProfileFragment extends Fragment {
         auth = FirebaseAuth.getInstance();
         currentUser = auth.getCurrentUser();
 
+        view.findViewById(R.id.logout_btn).setOnClickListener(v -> {
+            auth.signOut();
+            startActivity(new Intent(getContext(), Login.class));
+            getActivity().finish();
+            Utils.isAdmin = false;
+        });
         if (currentUser == null) {
 
             Toast.makeText(getContext(), "User not login", Toast.LENGTH_SHORT).show();

@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.app.flexfusion.R;
 import com.app.flexfusion.activities.DietsActivity;
 import com.app.flexfusion.activities.GraphChartKcalActivity;
+import com.app.flexfusion.activities.Login;
 import com.app.flexfusion.adapters.SelectedDietsAdapter;
 import com.app.flexfusion.adapters.SelectedDietsAdapter.OnDeleteClickedListener;
 import com.app.flexfusion.databinding.FragmentDietPlansBinding;
@@ -93,6 +94,15 @@ public class DietPlansFragment extends Fragment implements OnDeleteClickedListen
         dinnerAdapter = new SelectedDietsAdapter(getContext(), currentDinnerItems, "Dinner", this);
         snacksAdapter = new SelectedDietsAdapter(getContext(), currentSnacksItems, "Snacks", this);
 
+        if (Utils.isAdmin) {
+            view.findViewById(R.id.logout_btn).setVisibility(View.VISIBLE);
+            view.findViewById(R.id.logout_btn).setOnClickListener(v -> {
+                auth.signOut();
+                startActivity(new Intent(getContext(), Login.class));
+                getActivity().finish();
+                Utils.isAdmin = false;
+            });
+        }
         imvGraph.setOnClickListener(v -> {
             startActivity(new Intent(getContext(), GraphChartKcalActivity.class));
         });
